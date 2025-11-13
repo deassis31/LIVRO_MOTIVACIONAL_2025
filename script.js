@@ -39,3 +39,11 @@ function addFloating(page) {
     page.appendChild(span);
   }
 }
+const music = document.getElementById('bgMusic');
+
+// Toca música após o primeiro clique em qualquer lugar da página
+document.body.addEventListener('click', () => {
+    if(music.paused){
+        music.play();
+    }
+}, { once: true });
